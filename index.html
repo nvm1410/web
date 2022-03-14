@@ -12,10 +12,11 @@
 <body>
     <textarea id="run-code"></textarea>
     <button onclick="compileJs()">Run</button>
+    <p id='result'>Result here</p>
     <script>
         function compileJs() {
           const code= document.getElementById("run-code").value
-          console.log(eval(code))
+          document.getElementById("result").innerHTML = eval(code).toString()
         }
         </script>
 </body>
